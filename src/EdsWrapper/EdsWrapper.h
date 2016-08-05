@@ -60,11 +60,11 @@ namespace Eds {
 		EdsFileCreateDisposition inCreateDisposition, EdsAccess inDesiredAccess, EdsStreamRef* outStream);
 	void CreateMemoryStreamFromPointer(EdsVoid* inUserBuffer, EdsUInt32 inBufferSize, EdsStreamRef* outStream);
 	void GetPointer(EdsStreamRef inStream, EdsVoid** outPointer);
-	void Read(EdsStreamRef inStreamRef, EdsUInt32 inReadSize, EdsVoid* outBuffer, EdsUInt32* outReadSize);
-	void Write(EdsStreamRef inStreamRef, EdsUInt32 inWriteSize, const EdsVoid* inBuffer, EdsUInt32* outWrittenSize);
+	void Read(EdsStreamRef inStreamRef, EdsUInt64 inReadSize, EdsVoid* outBuffer, EdsUInt64* outReadSize);
+	void Write(EdsStreamRef inStreamRef, EdsUInt64 inWriteSize, const EdsVoid* inBuffer, EdsUInt64* outWrittenSize);
 	void Seek(EdsStreamRef inStreamRef, EdsInt32 inSeekOffset, EdsSeekOrigin inSeekOrigin);
-	void GetPosition(EdsStreamRef inStreamRef, EdsUInt32* outPosition);
-	void GetLength(EdsStreamRef inStreamRef, EdsUInt32* outLength);
+	void GetPosition(EdsStreamRef inStreamRef, EdsUInt64* outPosition);
+	void GetLength(EdsStreamRef inStreamRef, EdsUInt64* outLength);
 	void CopyData(EdsStreamRef inStreamRef, EdsUInt32 inWriteSize, EdsStreamRef outStreamRef);
 	void SetProgressCallback(EdsBaseRef inRef, EdsProgressCallback inProgressCallback, EdsProgressOption inProgressOption, EdsVoid* inContext);
 	void CreateImageRef(EdsStreamRef inStreamRef, EdsImageRef* outImageRef);

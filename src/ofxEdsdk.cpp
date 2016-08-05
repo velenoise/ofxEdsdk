@@ -11,7 +11,7 @@
 #define OFX_EDSDK_BUFFER_SIZE 1
 
 #define OFX_EDSDK_JPG_FORMAT 14337
-#define OFX_EDSDK_MOV_FORMAT 45316
+#define OFX_EDSDK_MOV_FORMAT 45317
 
 #if defined(TARGET_WIN32)
 #define _WIN32_DCOM
@@ -106,6 +106,8 @@ namespace ofxEdsdk {
         // completing, but sleeping then stopping capture is ok.
         ofSleepMillis(100);
         stopCapture();
+
+		return true;
     }
     
     Camera::~Camera() {
